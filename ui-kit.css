@@ -1,0 +1,191 @@
+@font-face {
+    font-family: "StratosSkyeng";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./assets/fonts/stratosskyengweb-regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "StratosSkyeng";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("./assets/fonts/stratosskyengweb-medium.woff2") format("woff2");
+}
+
+html {
+    scrollbar-width: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: StratosSkyeng;
+    overflow: auto;
+    font-size: 14px;
+    line-height: 18px;
+    background-color: #d8f3ef;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#app {
+    margin: 0 auto;
+    width: 60%;
+}
+
+p {
+    margin: 0;
+}
+
+.button,
+.secondary-button {
+    display: block;
+    padding: 10px 13px 13px;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 5px;
+    background-color: #565eef;
+    color: #ffffff;
+    border: none;
+    margin-bottom: 32px;
+}
+
+.link-button {
+    display: inline;
+    border: 0;
+    padding: 0;
+    background: none;
+    color: #565eef;
+    cursor: pointer;
+}
+
+.link-button:hover {
+    text-decoration: #6d73ff;
+}
+
+.button:hover {
+    background-color: #6d73ff;
+}
+
+.button[disabled="true"],
+.secondary-button[disabled="true"] {
+    background-color: #7fdfe2;
+    color: rgba(153, 153, 153, 0.6);
+    pointer-events: none;
+}
+
+.button:active {
+    background-color: #7fdfe2;
+}
+
+.secondary-button {
+    background-color: #565eef;
+    color: #fff;
+}
+
+.secondary-button:hover {
+    background-color: #6d73ff;
+}
+
+.secondary-button:active {
+    background-color: #7fdfe2;
+}
+
+.input {
+    height: 36px;
+    box-sizing: border-box;
+    padding: 15px;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgb(4, 18, 27);
+    border: none;
+    border-radius: 5px;
+    background-color: #e8e8e8;
+    margin-bottom: 16px;
+}
+
+.input .-error {
+    background-color: #fff;
+}
+
+.input:focus {
+    background-color: #fff;
+}
+
+.textarea {
+    padding: 15px;
+    resize: none;
+    width: 100%;
+    height: 100px;
+}
+
+strong {
+    font-weight: 500;
+}
+
+/** Анимация загрузки **/
+.loader {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.loader div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: #000;
+    animation: loader 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.loader div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+}
+
+.loader div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+}
+
+.loader div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+}
+
+@keyframes loader {
+    0% {
+        top: 8px;
+        height: 64px;
+    }
+    50%,
+    100% {
+        top: 24px;
+        height: 32px;
+    }
+}
+
+.-loading-like {
+    animation: rotating 2s linear infinite;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(30deg);
+    }
+    75% {
+        transform: rotate(-30deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
